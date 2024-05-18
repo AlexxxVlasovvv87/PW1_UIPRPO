@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String inputFile = "src/input.txt";
-        String outputFile = "src/output.txt";
+        String inputFile = "C:/Users/leone/Desktop/PW4/PW4_UIPRPO_RUDLS/input.txt";
+        String outputFile = "C:/Users/leone/Desktop/PW4/PW4_UIPRPO_RUDLS/output.txt";
         String newCountryCode = "+1";
 
         try {
