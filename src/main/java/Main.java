@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class Main {
     public static void main(String[] args) {
         String inputFile = "C:/Users/leone/Desktop/PW4/PW4_UIPRPO_RUDLS/input.txt";
@@ -15,7 +14,6 @@ public class Main {
             System.out.println("Ошибка при обработке файла: " + e.getMessage());
         }
     }
-
 
     // Обработка чтения из файла и запись в файл
     private static void processFile(String inputFile, String outputFile, String newCountryCode) throws IOException {
@@ -30,9 +28,8 @@ public class Main {
         }
     }
 
-
-    // Использование регулярных выражений для поиска телефонных номеров
-    private static String modifyPhoneNumbers(String text, String countryCode) {
+    // использование регулярных выражений для поиска телефонных номеров
+    public static String modifyPhoneNumbers(String text, String countryCode) {
         String regex = "(\\+?\\d{1,3}[-.\\s]?\\d{3}[-.\\s]?\\d{3}[-.\\s]?\\d{2}[-.\\s]?\\d{2})";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(text);
@@ -46,9 +43,8 @@ public class Main {
         return stringBuffer.toString();
     }
 
-
     // Удаление лишних символов, добавление кода страны
-    private static String processPhoneNumber(String phoneNumber, String countryCode) {
+    public static String processPhoneNumber(String phoneNumber, String countryCode) {
         phoneNumber = phoneNumber.replaceAll("[\\s\\-\\(\\)]", "");
         if (phoneNumber.length() < 10) {
             throw new RuntimeException("Некорректная длина номера");
@@ -58,10 +54,8 @@ public class Main {
         return phoneNumber;
     }
 
-
     // Форматирование номера
-    private static String formatPhoneNumber(String phoneNumber) {
+    public static String formatPhoneNumber(String phoneNumber) {
         return phoneNumber.replaceAll("(\\+\\d)(\\d{3})(\\d{3})(\\d{2})(\\d{2})", "$1 ($2) $3-$4-$5");
     }
 }
-
