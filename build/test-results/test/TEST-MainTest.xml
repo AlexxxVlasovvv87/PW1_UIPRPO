@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-05-19T13:33:49" hostname="DESKTOP-GC3821O" time="0.027">
+<testsuite name="MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-05-19T14:18:57" hostname="DESKTOP-GC3821O" time="0.058">
   <properties/>
-  <testcase name="testFormatPhoneNumber()" classname="MainTest" time="0.021"/>
-  <testcase name="testProcessPhoneNumber()" classname="MainTest" time="0.001"/>
-  <testcase name="testInvalidPhoneNumber()" classname="MainTest" time="0.003"/>
+  <testcase name="testFormatPhoneNumber()" classname="MainTest" time="0.047"/>
+  <testcase name="testProcessPhoneNumber()" classname="MainTest" time="0.002"/>
+  <testcase name="testInvalidPhoneNumber()" classname="MainTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
