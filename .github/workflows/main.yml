@@ -32,6 +32,9 @@ jobs:
     - name: Run tests
       run: ./gradlew test
 
+    - name: Generate Jacoco report
+      run: ./gradlew jacocoTestReport
+
     - name: Upload coverage to Coveralls
       uses: coverallsapp/github-action@v1
       with:
