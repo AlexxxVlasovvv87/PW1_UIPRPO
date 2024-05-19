@@ -21,7 +21,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'adopt' # Выберите нужный дистрибутив (например, OpenJDK, Oracle JDK и т.д.)
+        distribution: 'adopt' 
 
     - name: Build with javac
       run: javac src/Main.java
