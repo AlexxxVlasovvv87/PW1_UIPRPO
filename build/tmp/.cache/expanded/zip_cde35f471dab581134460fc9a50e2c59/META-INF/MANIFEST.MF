@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Archiver-Version: Plexus Archiver
 Created-By: Apache Maven Bundle Plugin
-Built-By: godin
-Build-Jdk: 1.8.0_202
+Build-Jdk-Spec: 17
 Automatic-Module-Name: org.jacoco.agent
-Bnd-LastModified: 1620135133834
+Bnd-LastModified: 1697316834495
+Build-Jdk: 17.0.8.1
+Built-By: root
 Bundle-Description: JaCoCo Agent
 Bundle-License: https://www.eclipse.org/legal/epl-2.0/
 Bundle-ManifestVersion: 2
@@ -12,12 +12,10 @@ Bundle-Name: JaCoCo Agent
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-SymbolicName: org.jacoco.agent
 Bundle-Vendor: Mountainminds GmbH & Co. KG
-Bundle-Version: 0.8.7.202105040129
-Eclipse-SourceReferences: scm:git:git://github.com/jacoco/jacoco.git;p
- ath="org.jacoco.agent";commitId=d19ea595a67af6f16d76b49ccdc12858c3570
- 298
-Export-Package: org.jacoco.agent;version="0.8.7"
-Originally-Created-By: Apache Maven Bundle Plugin
+Bundle-Version: 0.8.11.202310140853
+Eclipse-SourceReferences: scm:git:git://github.com/jacoco/jacoco.git;pat
+ h="org.jacoco.agent";commitId=f33756c37f1e41041d84018047b14cb394742761
+Export-Package: org.jacoco.agent;version="0.8.11"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
 Tool: Bnd-3.5.0.201709291849
 
