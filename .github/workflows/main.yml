@@ -24,8 +24,14 @@ jobs:
       - name: Generate JaCoCo report
         run: mvn jacoco:report
 
+      - name: Install jacoco-to-lcov
+        run: npm install -g jacoco-to-lcov
+
+      - name: Convert JaCoCo report to LCOV
+        run: jacoco-to-lcov target/site/jacoco/jacoco.xml > target/lcov.info
+
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: target/jacoco/jacoco.xml
+          path-to-lcov: target/lcov.info
