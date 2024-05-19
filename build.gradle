@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'com.github.kt3k.coveralls' version '2.10.2'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+coveralls {
+    sourceDirs = ['src/main/java']
+}

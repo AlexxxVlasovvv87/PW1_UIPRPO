@@ -23,8 +23,13 @@ jobs:
         java-version: '11'
         distribution: 'adopt' 
 
-    - name: Build with javac
-      run: javac src/Main.java
+    - name: Build with Gradle
+      run: ./gradlew build
 
     - name: Run tests
-      run: java -cp src Main input.txt output.txt
+      run: ./gradlew test
+
+    - name: Upload coverage to Coveralls
+      uses: coverallsapp/github-action@v1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
