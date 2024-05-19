@@ -37,6 +37,5 @@ jacocoTestReport {
 
 coveralls {
     sourceDirs = ['src/main/java']
-    jacocoReportPath = file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
-    reportPath = file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+    jacocoReportPath = "${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
 }
