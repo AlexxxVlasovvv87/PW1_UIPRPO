@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-05-19T14:21:14" hostname="DESKTOP-GC3821O" time="0.04">
-  <properties/>
-  <testcase name="testFormatPhoneNumber()" classname="MainTest" time="0.033"/>
-  <testcase name="testProcessPhoneNumber()" classname="MainTest" time="0.001"/>
-  <testcase name="testInvalidPhoneNumber()" classname="MainTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
