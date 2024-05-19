@@ -1,13 +1,14 @@
 plugins {
     id 'java'
+    id 'jacoco'
     id 'com.github.kt3k.coveralls' version '2.10.2'
 }
 
 group 'com.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 21
-targetCompatibility = 21
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
 
 repositories {
     mavenCentral()
@@ -21,6 +22,17 @@ test {
     useJUnitPlatform()
 }
 
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.enabled = true
+        csv.enabled = false
+        html.destination = layout.buildDirectory.dir('jacocoHtml')
+    }
+}
+
 coveralls {
     sourceDirs = ['src/main/java']
+    jacocoReportPath = file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+    reportPath = file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
 }
