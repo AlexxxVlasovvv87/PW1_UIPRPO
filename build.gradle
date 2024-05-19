@@ -28,13 +28,14 @@ jacoco {
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
-        xml.enabled = false
-        csv.enabled = false
-        html.enabled = true
+        xml.required.set(false)
+        csv.required.set(false)
+        html.outputLocation.set(layout.buildDirectory.dir('jacocoHtml'))
         lcov {
-            enabled = true
-            destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.info")
+            required.set(true)
+            outputLocation.set(layout.buildDirectory.file('reports/jacoco/test/jacocoTestReport.info'))
         }
     }
 }
